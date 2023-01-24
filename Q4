@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+main()
+{int a;
+int b;
+again:cin>>a;
+cin>>b;
+try// write the code in this block which can cause exception
+{
+
+if(b!=0)
+{
+int c=a/b;
+cout<<c;
+cout<<"\ndone";
+}
+else
+
+throw (b);//throwing the exception
+
+}
+catch(int i)//this will catch the exception
+{
+cout<<"exception caught b="<<b;
+cout<<"\nenter the values again\n";
+goto again;
+}
+cout<<"\nend";
+}
